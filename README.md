@@ -10,7 +10,7 @@ Search engine for Hack The Box machines using filters. It also selects a random 
 5. Apply filters `python3 htbPicker.py -d Medium -os Windows -s 4.2 --random`
 
 
-# TODO
+## Todo
 - Enable single filters
 - Search by name
 - Print machine avatar

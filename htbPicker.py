@@ -13,7 +13,8 @@ import urllib3
 
 urllib3.disable_warnings()
 
-API_KEY=os.environ['HTBKEY'] # export HTBKEY="YOUR_API_KEY"
+#API_KEY=os.environ['HTBKEY'] # export HTBKEY="YOUR_API_KEY"
+API_KEY="eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI1IiwianRpIjoiMzUwZTQwNzZkMmY1ZDE5NWEyYTUxNmZiMjYzMDVjYzYxMGNjNGU0MDk4MWFlZDk1MDNjMzU0NGQ3YWU1NjQwY2U1NjVhZTNkZDU2NWFkNTUiLCJpYXQiOjE2OTQyNjQ2MTEuMDU4MDM1LCJuYmYiOjE2OTQyNjQ2MTEuMDU4MDM2LCJleHAiOjE3MjU4MDA2MTEuMDQ5MDg0LCJzdWIiOiIxNDMxODkiLCJzY29wZXMiOlsiMmZhIl19.xFHYTPMYwdj2N9ybXaA-By87W_XBOgKI9oLx8rNBbPbY5yiHPBRyMWZwZY8iacfWc3fHkMP6u1ZR32Cb42uWZ3H_6HhJD5JiouPHN9Y7hedpgo_O6kB3D8MBsJZShXRSJbD8P8kYKO2OeqUOvBjG6F_xTIlphZOAJi9lKdxbJoTSeoyybyiVq9p_EjtbOI2IVTCEiqS1euAUmz0OhybQ31EB-oHYNALtTZNH3bFirLa563C_KZWIiM1AXMQosevKIrZSPSz0jAv7bGURJTBRxrYzEC3ljznnW2EzFKuZcTFbKluOfeh9gvUk-6QlxAs9QcHxN-sWLfqiyCXj4X0EWCrOoTLDu0QnFHFNtOVrZI47PWfoti6H6ee7UJMkx3KQXWlP1V5z-M69SzkfCbAZFiE8kp9yRDY6PuRH2b5ejUdTEg3j7iQOsIRYHyDR0VSsVg5TzhZiAT3BtuNT120HoQpEt7htIKxsJZrKj2FVuHaXc9u3KWmkLwlN6Qy6vussuwHrOT0rqlP6C6R9h6wHI2nQm5w0QKplKmzAaMG8D1gnhjZCmcXxWi-N5w4ILmZFZzW38SAYwRRcp4Mw3FkKewWfSjaRhsdesbU_FFCf-ssXKg3FAACiTNBZdABr97PLIZMDRt-pgRbjOwLkPPGNsvrA_0lrSd9X43IjPDGVszY"
 BASE_URL="https://www.hackthebox.com/api/v4/"
 
 def banner():
@@ -74,6 +75,8 @@ def printall():
             print("Name: " + machine["name"])
             print("Difficulty: " + machine["difficultyText"])
             print("Stars: " + str(machine["stars"]))
+            print("IP: " + machine["ip"])
+
             print()
         total+=1
     print(f"Found {filtered} machines from {total}\n")
@@ -95,6 +98,7 @@ def get_random(id_list):
             print("Difficulty: " + machine["difficultyText"])
             print("OS: " + machine["os"])
             print("Stars: " + str(machine["stars"]))
+            print("IP: " + machine["ip"])
             print("="*20)
             print()
 
