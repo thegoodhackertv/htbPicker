@@ -1,2 +1,2 @@
 # htbPicker
-Filter Hack The Box machines and pick a random machine for you.
+Search engine for hack the box machines using filters. It also selects a random machine for you.
